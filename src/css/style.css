@@ -1,6 +1,6 @@
 :root {
     --primary-color: rgb(8, 166, 228);
-    --primary-color-shadow:rgba(7, 172, 230, .16);
+    --dark-blue: rgb(5, 135, 185);
     --redish: rgb(251, 59, 100);
     --green: rgb(85, 223, 180);
     --black: rgb(0, 0, 0);
@@ -170,5 +170,92 @@ html, body {
     }
 
 .banner .banner__btn {}
-.banner .banner__btn {}
+
+----------------- selectory do bloku statystyki
+.main {
+
+
+}
+
+
+.hdl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -28rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+}
+
+
+.hdl .hdl_text {
+    color: var(--black);
+    font-size: 2rem;
+    font-family: 'Raleway', 'Open Sans';
+    font-weight: 400;
+    margin-right:  0.3125rem;
+}
+
+.column {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: row;
+    padding-inline: 20rem;
+
+    }
+
+.column .columns {
+    font-size: 1rem;
+    font-family: 'Raleway', 'Open Sans';
+    font-weight: 400;
+    margin-right:  0.3125rem;
+
+    /* zalozone wartosci do wysrodkowania icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+
+}
+
+.column .columns .icon_img {
+    position: absolute;
+    margin-left: 1.5rem;
+}
+
+
+.column .columns .kolo1 {
+    width: 3.625rem; /* Szerokość koła */
+    height: 3.625rem; /* Wysokość koła (musi być taka sama jak szerokość, aby uzyskać koło) */
+    background-color: var(--redish); /* Kolor tła koła (redish) */
+    border-radius: 50%; /* Ustawienie promienia zaokrąglenia na 50% (aby uzyskać koło) */
+}
+
+.column .columns .kolo2 {
+    width: 3.625rem; /* Szerokość koła */
+    height: 3.625rem; /* Wysokość koła (musi być taka sama jak szerokość, aby uzyskać koło) */
+    background-color: var(--dark-blue); /* Kolor tła koła (redish) */
+    border-radius: 50%; /* Ustawienie promienia zaokrąglenia na 50% (aby uzyskać koło) */
+}
+
+.column .columns .kolo3 {
+    width: 3.625rem; /* Szerokość koła */
+    height: 3.625rem; /* Wysokość koła (musi być taka sama jak szerokość, aby uzyskać koło) */
+    background-color: var(--green); /* Kolor tła koła (redish) */
+    border-radius: 50%; /* Ustawienie promienia zaokrąglenia na 50% (aby uzyskać koło) */
+}
+
+.column .columns .name_column {
+    color: var(--black);
+}
+
+.column .columns .text_column {
+    color: var(--grey-1);
+    margin-top: 0;
+}
+
+.klasa{gi}
 
