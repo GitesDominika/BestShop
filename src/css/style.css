@@ -44,20 +44,11 @@ html, body {
     text-decoration: none;  /* wtłączenie podkreślenia w linku */
 }
 
-/* edycja pliku svg lub rastrowego traktowanego jako logo
-   wylacamy klase poniewaz nasz projekt nie wymaga edycji pliku jpg
-
-.logo .logo__img {
-    width: 1.9375rem;
-    height: 2.1875rem;
-    margin-right: 0.625rem; }/* odstep w logo */
-
-
 /* formatowanie textu w menu */
 .logo .logo__text {
     color: var(--primary-color);
     font-size: 2rem;
-    text-transform:capitalize;
+    text-transform: capitalize;
     font-family: 'Raleway', 'Open Sans';
     font-weight: 400;
     margin-right:  0.3125rem;
@@ -167,21 +158,19 @@ html, body {
     margin-bottom: 2rem;
     line-height: 1rem;
     text-align: center;
-    }
+}
 
 .banner .banner__btn {}
 
 ----------------- selectory do bloku statystyki
-.main {
 
-
-}
-
+.main {}
 
 .hdl {
     display: flex;
     justify-content: center;
     align-items: center;
+
     margin-top: -28rem;
     padding-top: 2rem;
     padding-bottom: 6rem;
@@ -193,17 +182,25 @@ html, body {
     font-size: 2rem;
     font-family: 'Raleway', 'Open Sans';
     font-weight: 400;
-    margin-right:  0.3125rem;
+    margin-right: 0.3125rem;
 }
 
 .column {
+    /* 1352px to 84.5rem   -  szerosc strony max do 1352px*/
+    max-width: 70rem;
+    width: 100%;              /*  strona ma sie wyswietlac na 100% ekranu ale nie wiecej jak 1352px */
+    padding-inline: 1.25rem; /* inline padding to padding na lewy i prawy margines */
+    margin-inline: auto;      /* srodkowanie elementu */
+
+    /* wlączenie flexa dla klasy columns*/
     display: flex;
     justify-content:space-around;
     align-items: center;
     flex-direction: row;
-    padding-inline: 20rem;
 
-    }
+    padding-bottom: 4rem;
+
+}
 
 .column .columns {
     font-size: 1rem;
@@ -211,7 +208,7 @@ html, body {
     font-weight: 400;
     margin-right:  0.3125rem;
 
-    /* zalozone wartosci do wysrodkowania icon */
+    /* wartosci do wysrodkowania icon */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,5 +254,100 @@ html, body {
     margin-top: 0;
 }
 
-.klasa{gi}
+/* sekcja szara */
+
+.main2 {}
+
+.tlo {
+    background-color: var(--light-grey);
+    /* wlaczenie flexa dla klasy box - cel wyswietlanie w linie - pozimo  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    }
+
+.box {
+    max-width: 70rem; /* 1352px to 84.5rem   -  szerosc strony max do 1352px*/
+    width: 100%;  /*  strona ma sie wyswietlac na 100% ekranu ale nie wiecej jak 1352px */
+    padding-inline: 2rem; /* inline padding to padding na lewy i prawy margines */
+    margin-inline: auto;  /* srodkowanie elementu */
+
+    display: flex;  /* dodajemy flexa na rodzicu  "header__inner" aby ustawic .menu ktore jest dziekiem tego znacznika + aby wszystko działało dodajemy 3 wartosci z flex fox justify-content: center;  align-items: center;  flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+
+    border: 0.125rem solid var(--grey-1);
+    background-color: var(--white);
+}
+
+.box .hdl_text{
+    font-size: 2rem;
+    font-family: 'Raleway', 'Open Sans';
+    font-weight: 400;
+    margin-right:  3.125rem;
+
+}
+
+.box .lead_text{
+    font-size: 1rem;
+    font-family: 'Raleway', 'Open Sans';
+    font-weight: 500;
+    margin-right:  3.125rem;
+    line-height: 1.4;
+    width: 65%;
+}
+
+.box .line{
+    font-size: 1rem;
+    font-family: 'Raleway', 'Open Sans';
+    font-weight: 700;
+    margin-right:  3.125rem;
+
+    border-bottom: 0.25rem solid var(--redish);
+    width: 50%;
+    padding-top: 1rem;
+}
+
+.box .for_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0, 0, 0, 0,;
+    padding: 0, 0, 0, 0,;
+}
+
+.box .for_img .img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+
+    }
+
+.box .for_img .cube{
+    /* parametry na cuba */
+    width: 14.625rem;                            /* Szerokość koła */
+    height: 14.625rem;                          /* Wysokość koła (musi być taka sama jak szerokość, aby uzyskać koło) */
+    background-color: var(--redish);           /* Kolor tła koła (redish) */
+    border-radius: 3rem;
+    transform: rotate(45deg);}
+
+    .box .for_img .kolo4{
+        /* parametry na cuba */
+        width: 14.625rem;                            /* Szerokość koła */
+        height: 14.625rem;                          /* Wysokość koła (musi być taka sama jak szerokość, aby uzyskać koło) */
+        background-color: var(--primary-color);           /* Kolor tła koła (redish) */
+        border-radius: 7rem;
+    }
+
+.box .squer{
+    background-color: var(--green);
+}
 
