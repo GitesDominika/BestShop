@@ -14,7 +14,7 @@ html, body {
 }
 
 
-.container {      /*stare intro*/
+.container {
 
 }
 
@@ -162,7 +162,7 @@ html, body {
 
 .banner .banner__btn {}
 
------------------ selectory do bloku statystyki
+/*----------------- selectory do bloku statystyki*/
 
 .main {}
 
@@ -198,7 +198,7 @@ html, body {
     align-items: center;
     flex-direction: row;
 
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
 
 }
 
@@ -264,90 +264,143 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: space-between;
     flex-direction: column;
-
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    justify-content: space-around;
+    height: 87.1875rem;
+    padding-top: 4rem;
+    adding-top: 4rem;
     }
 
 .box {
     max-width: 70rem; /* 1352px to 84.5rem   -  szerosc strony max do 1352px*/
-    width: 100%;  /*  strona ma sie wyswietlac na 100% ekranu ale nie wiecej jak 1352px */
-    padding-inline: 2rem; /* inline padding to padding na lewy i prawy margines */
-    margin-inline: auto;  /* srodkowanie elementu */
+    height: 23.12rem;
 
     display: flex;  /* dodajemy flexa na rodzicu  "header__inner" aby ustawic .menu ktore jest dziekiem tego znacznika + aby wszystko działało dodajemy 3 wartosci z flex fox justify-content: center;  align-items: center;  flex-direction: column; */
-    justify-content: space-around;
     align-items: center;
 
     border: 0.125rem solid var(--grey-1);
     background-color: var(--white);
-}
+    }
 
-.box .hdl_text{
+.box .hdl_text {
     font-size: 2rem;
     font-family: 'Raleway', 'Open Sans';
     font-weight: 400;
-    margin-right:  3.125rem;
-
+    margin-right:  4.125rem;
+    margin-left: 4.125rem;
+    width: 50%;
 }
+
 
 .box .lead_text{
     font-size: 1rem;
     font-family: 'Raleway', 'Open Sans';
     font-weight: 500;
-    margin-right:  3.125rem;
+    margin-right:  4.125rem;
+    margin-left: 4.125rem;
     line-height: 1.4;
-    width: 65%;
+    width: 50%;
 }
 
 .box .line{
     font-size: 1rem;
     font-family: 'Raleway', 'Open Sans';
     font-weight: 700;
-    margin-right:  3.125rem;
+    margin-right:  4.125rem;
 
     border-bottom: 0.25rem solid var(--redish);
-    width: 50%;
+    width: 40%;
     padding-top: 1rem;
+    margin-left: 4.125rem;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between; /* Rozdziela elementy na lewą i prawą stronę */
+
+    max-width: 70rem; /* 1352px to 84.5rem   -  szerosc strony max do 1352px*/
+    text-align: left;
+}
+
+.inner .box {
+    flex: 1; /* Elastyczny podział miejsca, aby zająć dostępną przestrzeń */
+    background-color: var(--white); /* Dodaje tło do klasy "box" (opcjonalnie) */
+    display: block;
+}
+
+.inner .megafon {
+    flex: 1; /* Elastyczny podział miejsca, aby zająć dostępną przestrzeń */
+    background-color: var(--green); /* Dodaje tło do klasy "megafon" (opcjonalnie) */
+    text-align: center; /* Wyrównuje tekst i zawartość do prawej strony */
+    max-width: 30rem;
+}
+
+.inner .megafon .for_img {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+}
+
+.inner .megafon .for_img img {
+  max-width: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 .box .for_img {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin: 0, 0, 0, 0,;
-    padding: 0, 0, 0, 0,;
+    position: relative; /* Ustawienie pozycji rodzica na relative */
+    width: 50%;
 }
 
 .box .for_img .img {
     max-width: 100%;
+    position: absolute; /* Ustawienie pozycji obrazka na absolute */
+    z-index: 1; /* Ustalenie z-index, aby obrazek nachodził na inne elementy */
+    /* Możesz dostosować pozycję obrazka w zależności od twoich potrzeb: */
+
+    }
+
+.box .for_img .one {
+    margin-left: -15.5rem;
+    }
+
+.box .for_img .dwa {
+    width: 93%;
     height: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
-
-    }
-
-.box .for_img .cube{
-    /* parametry na cuba */
-    width: 14.625rem;                            /* Szerokość koła */
-    height: 14.625rem;                          /* Wysokość koła (musi być taka sama jak szerokość, aby uzyskać koło) */
-    background-color: var(--redish);           /* Kolor tła koła (redish) */
-    border-radius: 3rem;
-    transform: rotate(45deg);}
-
-    .box .for_img .kolo4{
-        /* parametry na cuba */
-        width: 14.625rem;                            /* Szerokość koła */
-        height: 14.625rem;                          /* Wysokość koła (musi być taka sama jak szerokość, aby uzyskać koło) */
-        background-color: var(--primary-color);           /* Kolor tła koła (redish) */
-        border-radius: 7rem;
-    }
-
-.box .squer{
-    background-color: var(--green);
 }
+
+.box .for_img .cube {
+    /* parametry na cuba */
+    width: 10.75rem;                            /* Szerokość koła */
+    height: 10.75rem;     /* Wysokość koła (musi być taka sama jak szerokość, aby uzyskać koło) */
+    background-color: var(--redish);           /* Kolor tła koła (redish) */
+    border-radius: 2.5625rem;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: translateY(-2rem) rotate(45deg);
+    }
+
+
+    .box .for_img .kolo4 {
+        /* parametry na cuba */
+        width: 19.625rem;                            /* Szerokość koła */
+        height: 19.625rem;
+        background-color: var(--primary-color);                    /* Wysokość koła (musi być taka sama jak szerokość, aby uzyskać koło) */
+        border-radius: 10rem;
+    }
+
+.box .line .onex {
+    border-bottom: 0.25rem solid var(--redish); /* Kolor tła koła (redish) */
+}
+
+.box .dwax .line  {
+    border-bottom: 0.25rem solid var(--primary-color); /* Kolor tła koła (redish) */
+}
+
+.box .trzyx .line  {
+    border-bottom: 0.25rem solid var(--green);} /* Kolor tła koła (redish) */
 
